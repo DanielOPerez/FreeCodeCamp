@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 
 # This function prepares de data for training. Creates a TensorFlow Dataset,
-# By default reorganices the data in batchs of 32 elements, aftershuffling
+# By default reorganices the data in batchs of 32 elements, after shuffling
 # Then creates several epochs
 def make_input_fn(data_df, label_df, num_epochs=10, shuffle=True, batch_size=32):
     def input_function():

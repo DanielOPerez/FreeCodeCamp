@@ -75,3 +75,6 @@ linear_est.train(train_input_fn) # train
 
 #Evaluating
 result = linear_est.evaluate(eval_input_fn)
+
+#Predicting
+prediction = list(linear_est.predict(eval_input_fn)) 

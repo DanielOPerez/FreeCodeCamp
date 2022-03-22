@@ -51,24 +51,24 @@ test_labels=pd.factorize(test_labels)[0]
 
 #create the model
 
-# model = tf.keras.Sequential([
-#     tf.keras.layers.Embedding(num_words, 32),
-#     tf.keras.layers.LSTM(32),
-#     tf.keras.layers.Dense(1, activation='sigmoid')
-# ])
+model = tf.keras.Sequential([
+     tf.keras.layers.Embedding(num_words, 32),
+     tf.keras.layers.LSTM(32),
+     tf.keras.layers.Dense(1, activation='sigmoid')
+])
 
-# #Training the model
-# model.compile(loss="binary_crossentropy",
-#               optimizer="rmsprop",
-#               metrics=["acc"])
+#Training the model
+model.compile(loss="binary_crossentropy",
+              optimizer="rmsprop",
+              metrics=["acc"])
 
-# history = model.fit(train_padded,                    
-#                    train_labels,
-#                    epochs=10,
-#                    validation_split=0.2)
+history = model.fit(train_padded,                    
+                    train_labels,
+                    epochs=10,
+                    validation_split=0.2)
 
 #model.save('SMS_model.h5')
-model = load_model('SMS_model.h5')
+#model = load_model('SMS_model.h5')
 
 
 #evaluate the model
